@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="page_title">Tennisschule Batiste Guerra (Tennis School Batiste Guerra) | Mehr als nur Tennis</title>
+    <meta name="description" content="Professionelles Tennis-Coaching mit Schweizer Präzision und deutscher Disziplin. Treten Sie der BG Tennisschule für erstklassiges Tennis-Training bei.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo circle.png">
+    <link rel="apple-touch-icon" href="images/logo circle.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Tennis Ball Menu (Left) -->
+                <div class="nav-left">
+                    <div class="tennis-menu-container">
+                        <button class="tennis-menu" id="hamburger" aria-label="Toggle navigation menu">
+                            <img src="images/tennisball menu button.png" alt="" class="tennis-ball" data-key="tennis_ball_menu_alt">
+                        </button>
+                        <span class="menu-text" data-key="menu">Menü</span>
+                    </div>
+                </div>
+                
+                <!-- Logo (Center) -->
+                <div class="nav-center">
+                    <div class="nav-logo">
+                        <img src="images/logo circle.png" alt="" class="logo-image" data-key="logo_alt">
+                    </div>
+                </div>
+                
+                <!-- Language Toggle (Right) -->
+                <div class="nav-right">
+                    <div class="language-switch active" id="languageSwitch" tabindex="0" role="switch" aria-checked="true">
+                        <div class="switch-labels">
+                            <div class="switch-label left" data-key="lang_en">
+                                EN
+                            </div>
+                            <div class="switch-label right" data-key="lang_de">
+                                DE
+                            </div>
+                        </div>
+                        <div class="switch-slider">
+                            <span class="switch-text" id="sliderText" data-key="lang_de">DE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Off-canvas Menu -->
+        <div class="off-canvas-menu" id="offCanvasMenu">
+            <button class="menu-close" id="menuClose" aria-label="Close navigation menu">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="menu-content">
+                <nav class="menu-nav">
+                    <ul>
+                        <li><a href="#home" data-key="nav_home">Home</a></li>
+                        <li><a href="#about" data-key="nav_about">Über uns</a></li>
+                        <li><a href="#programs" data-key="nav_programs">Programme</a></li>
+                        <li><a href="#news" data-key="nav_news">News & Camps</a></li>
+                        <li><a href="#coaches" data-key="nav_coaches">Trainer</a></li>
+                        <li><a href="#gallery" data-key="nav_gallery">Galerie</a></li>
+                        <li><a href="#contact" data-key="nav_contact">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <img src="images/Imagem WhatsApp 2025-09-11 às 11.41.46_4f7a3b08.jpg" alt="Tennis court" class="hero-image">
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title" data-key="hero_title">Tennisschule Batiste Guerra</h1>
+                <p class="hero-subtitle" data-key="hero_subtitle">Mehr als nur Tennis</p>
+                <button class="cta-button" onclick="scrollToSection('about')" data-key="hero_cta">Jetzt Anmelden</button>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="about_title">Über uns</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/Imagem WhatsApp 2025-09-19 às 18.17.30_630f45c8.jpg" alt="Tennis court" class="fade-in">
+                </div>
+                <div class="about-text">
+                    <h3 data-key="about_heading">Unsere Philosophie</h3>
+                    <p data-key="about_text1">In der Batiste Unity Tennis School ist Tennis mehr als nur ein Sport—es ist eine Leidenschaft, die wir mit Ihnen teilen möchten.</p>
+                    <p data-key="about_text2">Wir glauben fest daran, dass jeder das Potenzial hat, auf dem Tennisplatz zu blühen, unabhängig davon, ob Sie gerade zum ersten Mal einen Schläger in die Hand nehmen oder schon lange spielen.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label" data-key="stat_years">Jahre Erfahrung</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label" data-key="stat_courts">Tennisplätze</span>
+                        </div>
+                            <div class="stat">
+                                <span class="stat-number">N3(45)</span>
+                                <span class="stat-label" data-key="best_ranking">Beste Platzierung</span>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mission Section -->
+    <section class="our-mission section" id="our-mission">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="our_mission_title">Unsere Mission</h2>
+            </div>
+            
+            <div class="our-mission-content">
+                <!-- Mission Statement -->
+                <div class="mission-statement">
+                    <div class="statement-text">
+                        <p data-key="our_mission_text1">Unsere Mission ist es, Sie genau dort zu treffen, wo Sie stehen. Deshalb legen wir großen Wert auf individuelles Training und persönliche Betreuung.</p>
+                        <p data-key="our_mission_text2">Ihr Fortschritt treibt uns an, und Ihre Erfolge, egal wie klein, sind unsere größte Motivation.</p>
+                        <p data-key="our_mission_text3">Mit viel positiver Energie, Expertise und der nötigen Geduld helfen wir Ihnen, Ihre Technik zu verfeinern, Ihre Taktik zu schärfen und sich auf die Freude am Spiel zu konzentrieren.</p>
+                        <p data-key="our_mission_text4">Kommen Sie und werden Sie Teil unserer Tennisschulfamilie. Wir freuen uns darauf, Sie auf Ihrer Reise zu begleiten und Ihre Leidenschaft für diesen großartigen Sport zu wecken!</p>
+                    </div>
+                    <div class="mission-image">
+                        <img src="images/Imagem WhatsApp 2025-09-19 às 18.17.28_e8ce603e.jpg" alt="Tennis training session" class="fade-in">
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- All Ages Welcome Section -->
+    <section class="all-ages-section section" id="all-ages">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="all_ages_title">Tennisstunden</h2>
+                <p class="section-subtitle" data-key="all_ages_subtitle">
+                    Professionelles Tennis-Training für Junioren und Erwachsene. Ob Sie zum ersten Mal einen Schläger in die Hand nehmen oder Ihren Aufschlag perfektionieren möchten, wir haben Programme, die auf Ihr Können zugeschnitten sind.
+                </p>
+            </div>
+
+            <div class="cards-container">
+                <div class="age-card">
+                    <h3 class="card-title" data-key="juniors_title">Junioren</h3>
+                    <div class="card-age-range" data-key="juniors_age">Alter 5-17</div>
+                    <p class="card-description" data-key="juniors_description">
+                        Wettkampftraining für Jugendliche mit Fokus auf fortgeschrittene Techniken, Matchspiel und Turniervorbereitung. Perfekt für Gymnasiasten und aufstrebende Konkurrenten.
+                    </p>
+                    <div class="card-duration">
+                        <i class="fas fa-clock"></i>
+                        <span data-key="lesson_duration">55 Minuten pro Einheit</span>
+                    </div>
+                    <div class="card-pricing">
+                        <div class="pricing-section">
+                            <h4 data-key="private_lessons">Einzelstunden</h4>
+                            <div class="pricing-row">
+                                <span class="pricing-type" data-key="private_type">Privat</span>
+                                <span class="pricing-amount">95 CHF</span>
+                            </div>
+                            <div class="pricing-row">
+                                <span class="pricing-type" data-key="semi_private_type">Semi-privat</span>
+                                <span class="pricing-amount">50 CHF</span>
+                            </div>
+                        </div>
+                        <div class="pricing-section">
+                            <h4 data-key="group_lessons">Gruppenstunden <span class="per-person" data-key="per_person">(pro Person)</span></h4>
+                            <div class="pricing-row">
+                                <span class="pricing-type" data-key="three_persons">3 Personen</span>
+                                <span class="pricing-amount">35 CHF</span>
+                            </div>
+                            <div class="pricing-row">
+                                <span class="pricing-type" data-key="four_persons">4 Personen</span>
+                                <span class="pricing-amount">30 CHF</span>
+                            </div>
+                            <div class="pricing-row">
+                                <span class="pricing-type" data-key="five_persons">5 Personen</span>
+                                <span class="pricing-amount">25 CHF</span>
+                            </div>
+                        </div>
+                        <div class="pricing-note">
+                            <i class="fas fa-info-circle"></i>
+                                <span><strong data-key="pricing_note">Hinweis:</strong> <span data-key="non_member_fee">+15 CHF pro Lektion für Nicht‑Mitglieder (aufgeteilt auf alle Nicht‑Mitglieder) – nur bei Spielen im TC Basel (Outdoor). Indoor: andere Preise und anderer Standort.</span></span>
+                        </div>
+                    </div>
+                    <button class="card-cta" onclick="scrollToSection('contact')">
+                        <i class="fas fa-envelope"></i>
+                        <span data-key="contact_us_button">Kontaktieren Sie uns</span>
+                    </button>
+                </div>
+
+                <div class="age-card">
+                    <h3 class="card-title" data-key="adults_title">Erwachsene</h3>
+                    <div class="card-age-range" data-key="adults_age">Alter 18+</div>
+                    <p class="card-description" data-key="adults_description">
+                        Ob Sie Anfänger oder Wiedereinsteiger sind, unsere Erwachsenenprogramme bieten Flexibilität mit Abend- und Wochenendoptionen. Perfekt für Fitness, Fähigkeitsaufbau und geselliges Spiel.
+                    </p>
+                    <div class="card-duration">
+                        <i class="fas fa-clock"></i>
+                        <span data-key="lesson_duration">55 Minuten pro Einheit</span>
+                    </div>
+                    <div class="card-pricing">
+                        <div class="pricing-section">
+                            <h4 data-key="private_lessons">Einzelstunden</h4>
+                            <div class="pricing-row">
+                                <span class="pricing-type" data-key="private_type">Privat</span>
+                                <span class="pricing-amount">95 CHF</span>
+                            </div>
+                            <div class="pricing-row">
+                                <span class="pricing-type" data-key="semi_private_type">Semi-privat</span>
+                                <span class="pricing-amount">50 CHF</span>
+                            </div>
+                        </div>
+                        <div class="pricing-section">
+                            <h4 data-key="group_lessons">Gruppenstunden <span class="per-person" data-key="per_person">(pro Person)</span></h4>
+                            <div class="pricing-row">
+                                <span class="pricing-type" data-key="three_persons">3 Personen</span>
+                                <span class="pricing-amount">40 CHF</span>
+                            </div>
+                            <div class="pricing-row">
+                                <span class="pricing-type" data-key="four_persons">4 Personen</span>
+                                <span class="pricing-amount">35 CHF</span>
+                            </div>
+                            <div class="pricing-row">
+                                <span class="pricing-type" data-key="five_persons">5 Personen</span>
+                                <span class="pricing-amount">30 CHF</span>
+                            </div>
+                        </div>
+                        <div class="pricing-note">
+                            <i class="fas fa-info-circle"></i>
+                            <span><strong data-key="pricing_note">Hinweis:</strong> <span data-key="non_member_fee">+15 CHF pro Lektion für Nicht‑Mitglieder (aufgeteilt auf alle Nicht‑Mitglieder) – nur bei Spielen im TC Basel (Outdoor). Indoor: andere Preise und anderer Standort.</span></span>
+                        </div>
+                    </div>
+                    <button class="card-cta" onclick="scrollToSection('contact')">
+                        <i class="fas fa-envelope"></i>
+                        <span data-key="contact_us_button">Kontaktieren Sie uns</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Coaches Section -->
+    <section class="coaches section" id="coaches">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="coaches_title">Lernen Sie unseren Cheftrainer kennen</h2>
+            </div>
+            
+            <div class="coach-section">
+                <div class="coach-hero">
+                    
+                    <div class="coach-container">
+                        <div class="coach-image-container">
+                            <img src="images/Imagem WhatsApp 2025-09-19 às 18.17.30_62fe56a3.jpg" 
+                                 alt="Batiste Guerra - Head Tennis Coach" 
+                                 class="coach-image"
+                                 tabindex="0">
+                        </div>
+
+                        <div class="coach-info">
+                            <div class="coach-title-section">
+                                <h1 class="coach-name" data-key="coach_name">Batiste Guerra</h1>
+                                <div class="coach-role" data-key="coach_role">Cheftrainer & Gründer</div>
+                                <div class="coach-experience" data-key="coach_experience">Zertifizierter Profi • Ehemaliger ITF Tour Spieler</div>
+                                    <div class="coach-license">
+                                        <span class="license-tag" data-key="coach_license">Wettkampftrainer C</span>
+                                        <span class="credential-tag" data-key="credential_2">Beste Platzierung in der Schweiz N3(45)</span>
+                                        <span class="credential-tag" data-key="credential_3">Beste Platzierung im Ausland 400 ITF</span>
+                                    </div>
+                                <div class="experience-badge">
+                                    <i class="fas fa-trophy"></i>
+                                    <span data-key="coach_years">10 Jahre Erfahrung</span>
+                                </div>
+                            </div>
+
+                            <p class="coach-bio" data-key="coach_bio">
+                                Mit über 10 Jahren Coaching-Exzellenz bringt Batiste Weltklasse-Expertise und Leidenschaft in jede Lektion. Nachdem er auf der ITF-Tour angetreten und neben Tennis-Legenden trainiert hat, widmet er seine Karriere nun der Entwicklung von Spielern aller Niveaus, von Anfängern, die ihren ersten Schlag machen, bis hin zu Wettkampfsportlern, die nach Meisterschaftsträumen streben.
+                            </p>
+
+                            <div class="coach-specialties">
+                                <span class="specialty-tag" data-key="specialty_competition">Wettkampftraining</span>
+                                <span class="specialty-tag" data-key="specialty_mental">Mentale Strategie</span>
+                                <span class="specialty-tag" data-key="specialty_match">Matchvorbereitung</span>
+                                <span class="specialty-tag" data-key="specialty_sparring_r3">Sparring ab R3</span>
+                                <span class="specialty-tag" data-key="specialty_ic_team_prep">IC Vorbereitung für Mannschaften</span>
+                                <span class="specialty-tag" data-key="specialty_tournament_support">Turnierbegleitung</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coach-stats-section">
+
+                    <div class="credentials-section">
+                        <h3 class="credentials-title">
+                            <i class="fas fa-certificate"></i>
+                            <span data-key="credentials_title">Tennis-Training Erfolge</span>
+                        </h3>
+                        <div class="credentials-list">
+                            <span class="credential" data-key="credential_1">Zertifizierter Wettkampftrainer C Swiss Tennis</span>
+                            
+                            <span class="credential" data-key="credential_4">Noch aktiv auf der internationalen ITF-Tour weltweit</span>
+                            <span class="credential" data-key="credential_5">Schweizer Nationalmannschaft B</span>
+                            <span class="credential" data-key="credential_6">Badenliga Deutschland</span>
+                            <span class="credential" data-key="credential_7">Schweizer Preisgeld-Turnier</span>
+                        </div>
+
+                        <button class="contact-coach" onclick="scrollToSection('contact')">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span data-key="book_session">Eine Session mit Batiste buchen</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News/Camps Section -->
+    <section class="news section" id="news">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="news_title">News & Camps</h2>
+                <p class="section-subtitle" data-key="news_subtitle">Aktuelle Updates, Camps und Events</p>
+            </div>
+
+            <div class="news-grid">
+                <!-- Post 1 -->
+                <article class="news-card">
+                    <img src="images/1754999969.jpg" alt="Camp Ali Bey Club Manavgat" class="news-image" data-key="news1_alt">
+                    <div class="news-content">
+                        <div class="news-header">
+                            <div class="news-meta" data-key="news1_date">12. August 2025</div>
+                            <h3 class="news-title" data-key="news1_title">Vision & Passion Tenniscamp im Ali Bey Club Manavgat</h3>
+                            <p class="news-text" data-key="news1_text">Erlebe eine unvergessliche Woche voller Sport, Sonne und Spass – direkt am Meer! Unser Tenniscamp im wunderschönen Ali Bey Club Manavgat (Türkei) verbindet professionelles Tennistraining mit Entspannung, Genuss und Geselligkeit.</p>
+                        </div>
+                        <div class="news-footer">
+                            <a class="news-button" href="news/vision-passion-ali-bey.html" target="_blank" rel="noopener noreferrer"><span data-key="view_more">Mehr erfahren</span><span class="news-button__icon">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="news-card">
+                    <img src="images/auslandscamp-2025-tennis-und-erholung-in-antalya-türkei.jpg" alt="Auslandscamp 2025 Antalya" class="news-image" data-key="news2_alt">
+                    <div class="news-content">
+                        <div class="news-header">
+                            <div class="news-meta" data-key="news2_date">08. Oktober 2024</div>
+                            <h3 class="news-title" data-key="news2_title">Auslandscamp 2025: Tennis und Erholung in Antalya, Türkei</h3>
+                            <p class="news-text" data-key="news2_text">Melde dich jetzt für unser All-Inclusive-Tenniscamp vom 12. bis 19. April 2025 an. Geniesse Training und Erholung im 5-Sterne-Hotel am Meer, mit über 60 Tennisplätzen und einer großartigen Tennis-Community. Interesse? Schreibe uns eine E-Mail für mehr Infos! Anmeldeschluss ist der 20. Oktober 2024.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="news-card">
+                    <img src="images/1717915482.png" alt="Unterrichtsangebote 2024" class="news-image" data-key="news3_alt">
+                    <div class="news-content">
+                        <div class="news-header">
+                            <div class="news-meta" data-key="news3_date">10. Juni 2024</div>
+                            <h3 class="news-title" data-key="news3_title">TENNISUNTERRICHT & CAMPS 2024</h3>
+                            <p class="news-text" data-key="news3_text">TC Basel West & SERVETENNIS: Unterrichtsangebote 2024</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 4 -->
+                <article class="news-card">
+                    <img src="images/1717706184.jpg" alt="Universitätssport Kooperation" class="news-image" data-key="news4_alt">
+                    <div class="news-content">
+                        <div class="news-header">
+                            <div class="news-meta" data-key="news4_date">09. Juni 2024</div>
+                            <h3 class="news-title" data-key="news4_title">Universitätssport</h3>
+                            <p class="news-text" data-key="news4_text">Der TC Basel West und die Uni Basel kooperieren für Sportkurse. Im August und September werden deshalb am Mittwoch Abend die Plätze besetzt sein.</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="gallery_title">Galerie</h2>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <img src="images/Imagem WhatsApp 2025-09-11 às 11.41.46_4f7a3b08.jpg" alt="Tennis training">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="images/Imagem WhatsApp 2025-09-19 às 18.17.28_e8ce603e.jpg" alt="Tennis training session">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="images/Imagem WhatsApp 2025-09-22 às 11.22.09_b7620637.jpg" alt="Tennis court action">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="images/Imagem WhatsApp 2025-09-22 às 11.22.09_de27c1b2.jpg" alt="Tennis training">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="images/Imagem WhatsApp 2025-09-22 às 11.22.10_f1547640.jpg" alt="Tennis match">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="images/Imagem WhatsApp 2025-09-22 às 11.25.11_3ed016de.jpg" alt="Tennis academy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="contact_title">Kontaktieren Sie uns</h2>
+                <p class="section-subtitle" data-key="contact_subtitle">Nehmen Sie Kontakt mit unserem Team auf</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info-container">
+                    <div class="contact-info-header">
+                        <h3 data-key="contact_info_title">Kontaktinformationen</h3>
+                        <p data-key="contact_info_subtitle">Nehmen Sie Kontakt mit uns für Tennisstunden und Training auf</p>
+                    </div>
+                    
+                    <div class="contact-info-grid">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <a href="https://www.google.com/maps?q=TC+Basel+West,+Buschweilerweg+29,+4055+Basel" target="_blank" rel="noopener noreferrer" aria-label="Open map">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </a>
+                            </div>
+                            <div class="contact-details">
+                                <h4 data-key="contact_address_title">Adresse</h4>
+                                <p>
+                                    <a href="https://www.google.com/maps?q=TC+Basel+West,+Buschweilerweg+29,+4055+Basel" target="_blank" rel="noopener noreferrer" data-key="contact_address">TC Basel West, Buschweilerweg 29<br>4055 Basel, Schweiz</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <a href="tel:+41762120297" aria-label="Call">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                            </div>
+                            <div class="contact-details">
+                                <h4 data-key="contact_phone_title">Telefon</h4>
+                                <p><a href="tel:+41762120297" data-key="contact_phone">+41 76 212 02 97</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <a href="mailto:batiste.guerra0@sunrise.ch" aria-label="Email">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                            <div class="contact-details">
+                                <h4 data-key="contact_email_title">E-Mail</h4>
+                                <p><a href="mailto:batiste.guerra0@sunrise.ch" data-key="contact_email">batiste.guerra0@sunrise.ch</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <a href="https://www.instagram.com/eltigre_333/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Instagram</h4>
+                                <p><a href="https://www.instagram.com/eltigre_333/" target="_blank" rel="noopener noreferrer">@eltigre_333</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 data-key="contact_hours_title">Öffnungszeiten</h4>
+                                <p data-key="contact_hours_text">Mo-Fr: 6:00-22:00<br>Sa-So: 8:00-20:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <div class="map-header">
+                        <h3 data-key="find_us_title">Finden Sie uns</h3>
+                        <p data-key="find_us_subtitle">Besuchen Sie uns in unserer Tennisanlage in Basel</p>
+                    </div>
+                    <iframe 
+                        src="https://www.google.com/maps?q=TC+Basel+West,+Buschweilerweg+29,+4055+Basel&output=embed"
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="TC Basel West, Buschweilerweg 29, 4055 Basel - Map">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="images/logo circle.png" alt="Logo" class="footer-logo" width="48" height="48">
+                        <div class="footer-brand-text">
+                            <h3 data-key="footer_title">Tennisschule Batiste Guerra</h3>
+                            <p class="footer-slogan" data-key="footer_slogan">Mehr als nur Tennis</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/eltigre_333/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/41762120297" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:batiste.guerra0@sunrise.ch" aria-label="Email" target="_blank"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-key="footer_links_title">Schnelllinks</h4>
+                    <ul>
+                        <li><a href="#about" data-key="nav_about">Über uns</a></li>
+                        <li><a href="#news" data-key="nav_news">News & Camps</a></li>
+                        <li><a href="#programs" data-key="nav_programs">Programme</a></li>
+                        <li><a href="#coaches" data-key="nav_coaches">Trainer</a></li>
+                        <li><a href="#contact" data-key="nav_contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                
+                <div class="footer-section">
+                    <h4 data-key="contact_title">Kontakt</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> TC Basel West, Buschweilerweg 29, 4055 Basel</p>
+                    <p><i class="fas fa-phone"></i> +41 76 212 02 97</p>
+                    <p><i class="fas fa-envelope"></i> batiste.guerra0@sunrise.ch</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BG Tennisschule. <span data-key="footer_rights">Alle Rechte vorbehalten.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Gallery Modal -->
+    <div class="gallery-modal" id="galleryModal">
+        <div class="gallery-modal-content">
+            <span class="gallery-modal-close" id="galleryModalClose">&times;</span>
+            <img class="gallery-modal-image" id="galleryModalImage" src="" alt="">
+            <div class="gallery-modal-nav">
+                <button class="gallery-modal-prev" id="galleryModalPrev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="gallery-modal-next" id="galleryModalNext">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="" title="" data-key="back_to_top_label">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Company Side Tag -->
+    <div class="company-side-tag">
+        <a href="https://www.cutstudios.pt" target="_blank" rel="noopener noreferrer" class="company-link">
+            <div class="company-tag-content">
+                <span class="company-text">Created by</span>
+                <img src="images/logocut.png" alt="CUT Studios" class="company-logo">
+            </div>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+</html>
+</html>
