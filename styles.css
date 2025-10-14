@@ -3307,6 +3307,11 @@ p {
         padding: 0 15px;
     }
     
+    /* Center align coach credentials on mobile */
+    .coach-license {
+        justify-content: center;
+    }
+    
     .nav-container {
         padding: 12px 15px;
     }

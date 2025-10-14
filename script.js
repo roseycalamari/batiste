@@ -223,9 +223,9 @@
                 // Coach Section
                 coach_name: 'Batiste Guerra',
                 coach_role: 'Cheftrainer & Gründer',
-                coach_experience: 'Zertifizierter Profi und aktiver ITF‑Tour‑Spieler',
+                coach_experience: 'Wettkampftrainer C • ITF Tour Spieler',
                 coach_years: '10 Jahre Erfahrung',
-                coach_bio: 'Mit über 10 Jahren Coaching-Exzellenz bringt Batiste Weltklasse-Expertise und Leidenschaft in jede Lektion. Er tritt weiterhin auf der ITF-Tour an und trainierte neben Tennis-Legenden. Heute widmet er seine Karriere der Entwicklung von Spielern aller Niveaus, von Anfängern, die ihren ersten Schlag machen, bis hin zu Wettkampfsportlern, die nach Meisterschaftsträumen streben.',
+                coach_bio: 'Als ITF Spieler besiegte ich drei Spieler aus den ATP Top 1000 sowie einen aus den ATP Top 700. Mit über 10 Jahren Coaching-Erfahrung entwickle ich Spieler aller Niveaus – von Anfängern bis hin zu Wettkampfsportlern. Tennis ist meine grosse Leidenschaft und ich hoffe das Feuer in dir wecken zu können.',
                 coach_license: 'Wettkampftrainer C Tennislehrer',
                 specialty_competition: 'Wettkampftraining',
                 specialty_mental: 'Mentale Strategie',
@@ -243,6 +243,7 @@
                 credential_5: 'Schweizer Nationalmannschaft B',
                 credential_6: 'Badenliga Deutschland',
                 credential_7: 'Schweizer Preisgeld-Turnier',
+                credential_8: '3 Jahre als Tennisprofi',
                 book_session: 'Eine Session mit Batiste buchen',
                 
                 // Contact Section
@@ -499,9 +500,9 @@
                 // Coach Section
                 coach_name: 'Batiste Guerra',
                 coach_role: 'Head Coach & Founder',
-                coach_experience: 'Certified Professional and Active ITF Tour Player',
+                coach_experience: 'Competition Trainer C • ITF Tour Player',
                 coach_years: '10 Years Experience',
-                coach_bio: 'With over 10 years of coaching excellence, I bring world-class expertise and passion to every lesson. I continue to compete on the ITF Tour and have trained alongside tennis legends. Today I dedicate my career to developing players of all levels, from beginners taking their first swing to competitive athletes pursuing championship dreams.',
+                coach_bio: 'As an ITF player, I defeated 3 players from the ATP Top 1000 and one from the ATP Top 700. With over 10 years of coaching experience, I develop players of all levels, from beginners to competitive athletes. Tennis is my great passion and I hope to ignite that fire in you.',
                 coach_license: 'Competition Coach C',
                 specialty_competition: 'Competition Training',
                 specialty_mental: 'Mental Strategy',
@@ -519,6 +520,7 @@
                 credential_5: 'Swiss National Team B',
                 credential_6: 'Badenliga Germany',
                 credential_7: 'Swiss Prize Money Tournament',
+                credential_8: '3 Years as Tennis Professional',
                 book_session: 'Book a Session with Batiste',
                 
                 // Contact Section
