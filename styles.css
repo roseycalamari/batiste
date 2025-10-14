@@ -3312,6 +3312,15 @@ p {
         justify-content: center;
     }
     
+    /* Center align about section content on mobile */
+    .about-text {
+        text-align: center;
+    }
+    
+    .about-text h3 {
+        text-align: center;
+    }
+    
     .nav-container {
         padding: 12px 15px;
     }
