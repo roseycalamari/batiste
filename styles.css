@@ -1530,26 +1530,46 @@ p {
 }
 
 .contact-coach {
-    background: linear-gradient(135deg, var(--accent-color), #ff8a6e);
+    background: linear-gradient(135deg, var(--accent-color), #ff7a5f);
     color: white;
     border: none;
-    padding: 16px 32px;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: 600;
+    padding: 18px 40px;
+    border-radius: 999px;
+    font-size: 1.15rem;
+    font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
     font-family: 'Montserrat', sans-serif;
     margin-top: 20px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 10px;
-    box-shadow: 0 8px 25px rgba(255, 155, 132, 0.4);
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 12px 30px rgba(255, 122, 95, 0.45), 0 0 0 6px rgba(255, 122, 95, 0.15);
+    letter-spacing: 0.3px;
+    position: relative;
 }
 
 .contact-coach:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(255, 155, 132, 0.6);
+    box-shadow: 0 16px 40px rgba(255, 122, 95, 0.55), 0 0 0 8px rgba(255, 122, 95, 0.18);
+}
+
+/* Inline coach CTA styling (within coach info) */
+.coach-cta-inline {
+    margin-top: 1.25rem;
+}
+
+/* Coach CTA container at bottom of coach section */
+.coach-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+    padding: 0 1rem 0.5rem;
+}
+
+.coach-cta .contact-coach i {
+    font-size: 1rem;
 }
 
 

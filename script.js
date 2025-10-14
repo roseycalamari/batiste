@@ -188,14 +188,14 @@
                 our_mission_text1: 'Meine Mission ist es, Sie genau dort zu treffen, wo Sie stehen. Deshalb lege ich großen Wert auf individuelles Training und persönliche Betreuung.',
                 our_mission_text2: 'Ihr Fortschritt treibt mich an, und Ihre Erfolge, egal wie klein, sind meine größte Motivation.',
                 our_mission_text3: 'Mit positiver Energie, Expertise und der nötigen Geduld helfe ich Ihnen, Ihre Technik zu verfeinern, Ihre Taktik zu schärfen und die Freude am Spiel zu erleben.',
-                our_mission_text4: 'Kommen Sie vorbei und werden Sie Teil meiner Tennisschule. Ich freue mich darauf, Sie auf Ihrer Reise zu begleiten und Ihre Leidenschaft für diesen großartigen Sport zu wecken!',
+                our_mission_text4: 'Kommen Sie vorbei und werden Sie Teil meiner Tennisfamilie. Ich freue mich darauf, Sie auf Ihrer Reise zu begleiten und Ihre Leidenschaft für diesen großartigen Sport zu wecken!',
                 
                 // Mission Points
                 mission_point_meet: 'Ich treffe Sie dort, wo Sie sind',
                 mission_point_training: 'Individuelles Training',
                 mission_point_progress: 'Ihr Fortschritt treibt mich an',
                 mission_point_success: 'Jeder Erfolg zählt',
-                mission_point_family: 'Werden Sie Teil meiner Tennisschule',
+                mission_point_family: 'Werden Sie Teil meiner Tennisfamilie',
                 
                 // All Ages Section
                 all_ages_title: 'Tennisstunden',
@@ -238,7 +238,7 @@
                 credentials_title: 'Tennis-Training Erfolge',
                 credential_1: 'Zertifizierter Wettkampftrainer C Swiss Tennis',
                 credential_2: 'Beste Platzierung in der Schweiz N3(45)',
-                credential_3: 'Beste Platzierung im Ausland 400 ITF',
+                credential_3: 'Aktiver NLB Spieler',
                 credential_4: 'Noch aktiv auf der internationalen ITF-Tour weltweit',
                 credential_5: 'Schweizer Nationalmannschaft B',
                 credential_6: 'Badenliga Deutschland',
