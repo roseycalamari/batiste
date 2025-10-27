@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Homepage (Main Page) -->
+    <url>
+        <loc>https://www.batisteguerra.ch/</loc>
+        <lastmod>2025-10-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.batisteguerra.ch/?lang=de"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.batisteguerra.ch/?lang=en"/>
+        
+        <!-- Image sitemap entries for main page -->
+        <image:image>
+            <image:loc>https://www.batisteguerra.ch/images/Imagem%20WhatsApp%202025-09-11%20%C3%A0s%2011.41.46_4f7a3b08.jpg</image:loc>
+            <image:title>Tennisschule Basel - Professioneller Tennisunterricht am TC Basel West</image:title>
+            <image:caption>Tennisunterricht Basel am TC Basel West</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.batisteguerra.ch/images/logo%20circle.png</image:loc>
+            <image:title>Tennisschule Batiste Guerra Basel Logo</image:title>
+        </image:image>
+    </url>
+    
+    <!-- About Section -->
+    <url>
+        <loc>https://www.batisteguerra.ch/#about</loc>
+        <lastmod>2025-10-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Programs/Lessons Section -->
+    <url>
+        <loc>https://www.batisteguerra.ch/#all-ages</loc>
+        <lastmod>2025-10-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Coaches Section -->
+    <url>
+        <loc>https://www.batisteguerra.ch/#coaches</loc>
+        <lastmod>2025-10-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- News & Camps Section -->
+    <url>
+        <loc>https://www.batisteguerra.ch/#news</loc>
+        <lastmod>2025-10-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Gallery Section -->
+    <url>
+        <loc>https://www.batisteguerra.ch/#gallery</loc>
+        <lastmod>2025-10-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Contact Section -->
+    <url>
+        <loc>https://www.batisteguerra.ch/#contact</loc>
+        <lastmod>2025-10-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- News Article: Vision & Passion Tennis Camp -->
+    <url>
+        <loc>https://www.batisteguerra.ch/news/vision-passion-ali-bey.html</loc>
+        <lastmod>2025-10-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://www.batisteguerra.ch/images/1754999969.jpg</image:loc>
+            <image:title>Tenniscamp Schweiz - Vision & Passion Camp Ali Bey Club Manavgat</image:title>
+        </image:image>
+    </url>
+    
+</urlset>
+
