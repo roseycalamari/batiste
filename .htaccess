@@ -9,16 +9,10 @@
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     
-    # Force WWW (or remove if you prefer non-www)
-    # Uncomment one of the following:
-    
-    # Option 1: Force WWW
-    # RewriteCond %{HTTP_HOST} !^www\. [NC]
-    # RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-    
-    # Option 2: Force non-WWW
-    # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-    # RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [L,R=301]
+    # Force WWW (Redirects non-www to www for consistent SEO)
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteCond %{HTTP_HOST} !^localhost [NC]
+    RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     
     # Remove trailing slash (optional)
     RewriteCond %{REQUEST_FILENAME} !-d
