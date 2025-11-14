@@ -5,28 +5,28 @@
     
     <!-- Homepage (Main Page) -->
     <url>
-        <loc>https://www.batisteguerra.ch/</loc>
+        <loc>https://www.tennisschule-bg.ch/</loc>
         <lastmod>2025-10-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.batisteguerra.ch/?lang=de"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.batisteguerra.ch/?lang=en"/>
+        <xhtml:link rel="alternate" hreflang="de-CH" href="https://www.tennisschule-bg.ch/?lang=de"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.tennisschule-bg.ch/?lang=en"/>
         
         <!-- Image sitemap entries for main page -->
         <image:image>
-            <image:loc>https://www.batisteguerra.ch/images/Imagem%20WhatsApp%202025-09-11%20%C3%A0s%2011.41.46_4f7a3b08.jpg</image:loc>
+            <image:loc>https://www.tennisschule-bg.ch/images/Imagem%20WhatsApp%202025-09-11%20%C3%A0s%2011.41.46_4f7a3b08.jpg</image:loc>
             <image:title>Tennisschule Basel - Professioneller Tennisunterricht am TC Basel West</image:title>
             <image:caption>Tennisunterricht Basel am TC Basel West</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://www.batisteguerra.ch/images/logo%20circle.png</image:loc>
+            <image:loc>https://www.tennisschule-bg.ch/images/logo%20circle.png</image:loc>
             <image:title>Tennisschule Batiste Guerra Basel Logo</image:title>
         </image:image>
     </url>
     
     <!-- About Section -->
     <url>
-        <loc>https://www.batisteguerra.ch/#about</loc>
+        <loc>https://www.tennisschule-bg.ch/#about</loc>
         <lastmod>2025-10-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -34,7 +34,7 @@
     
     <!-- Programs/Lessons Section -->
     <url>
-        <loc>https://www.batisteguerra.ch/#all-ages</loc>
+        <loc>https://www.tennisschule-bg.ch/#all-ages</loc>
         <lastmod>2025-10-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -42,7 +42,7 @@
     
     <!-- Coaches Section -->
     <url>
-        <loc>https://www.batisteguerra.ch/#coaches</loc>
+        <loc>https://www.tennisschule-bg.ch/#coaches</loc>
         <lastmod>2025-10-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -50,7 +50,7 @@
     
     <!-- News & Camps Section -->
     <url>
-        <loc>https://www.batisteguerra.ch/#news</loc>
+        <loc>https://www.tennisschule-bg.ch/#news</loc>
         <lastmod>2025-10-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -58,7 +58,7 @@
     
     <!-- Gallery Section -->
     <url>
-        <loc>https://www.batisteguerra.ch/#gallery</loc>
+        <loc>https://www.tennisschule-bg.ch/#gallery</loc>
         <lastmod>2025-10-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -66,7 +66,7 @@
     
     <!-- Contact Section -->
     <url>
-        <loc>https://www.batisteguerra.ch/#contact</loc>
+        <loc>https://www.tennisschule-bg.ch/#contact</loc>
         <lastmod>2025-10-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -74,12 +74,12 @@
     
     <!-- News Article: Vision & Passion Tennis Camp -->
     <url>
-        <loc>https://www.batisteguerra.ch/news/vision-passion-ali-bey.html</loc>
+        <loc>https://www.tennisschule-bg.ch/news/vision-passion-ali-bey.html</loc>
         <lastmod>2025-10-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <image:image>
-            <image:loc>https://www.batisteguerra.ch/images/1754999969.jpg</image:loc>
+            <image:loc>https://www.tennisschule-bg.ch/images/1754999969.jpg</image:loc>
             <image:title>Tenniscamp Schweiz - Vision & Passion Camp Ali Bey Club Manavgat</image:title>
         </image:image>
     </url>
