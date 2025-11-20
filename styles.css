@@ -180,6 +180,10 @@ p {
     overflow: hidden;
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.3);
+    /* Fix for anchor tag styling */
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
 .language-switch.active {
@@ -195,6 +199,7 @@ p {
     box-shadow: 
         inset 0 2px 4px rgba(0, 0, 0, 0.15),
         0 6px 25px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
 }
 
 .language-switch:active {
@@ -204,6 +209,11 @@ p {
 .language-switch:focus {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
+}
+
+.language-switch:visited {
+    color: inherit;
+    text-decoration: none;
 }
 
 .switch-labels {
