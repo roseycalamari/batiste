@@ -216,7 +216,7 @@
                 four_persons: '4 Personen',
                 five_persons: '5 Personen',
                 pricing_note: 'Hinweis:',
-                non_member_fee: 'CHF 15 pro Lektion für Nicht‑Mitglieder (aufgeteilt auf alle Nicht‑Mitglieder) – nur bei Spielen im TC Basel West (Outdoor).',
+                non_member_fee: 'CHF 15 pro Lektion für Nicht‑Mitglieder (aufgeteilt auf alle Nicht‑Mitglieder) – nur bei Spielen im TC Basel West (Outdoor). Wichtig: Bei Indoor-Spielen kommt zusätzlich die Platzgebühr hinzu.',
                 view_more: 'Mehr erfahren',
                 contact_us_button: 'Kontaktieren Sie mich',
                 
@@ -493,7 +493,7 @@
                 four_persons: '4 People',
                 five_persons: '5 People',
                 pricing_note: 'Note:',
-                non_member_fee: 'Extra CHF 15 per lesson for non‑members (shared by all non‑members) — only when playing at TC Basel West (outdoor).',
+                non_member_fee: 'Extra CHF 15 per lesson for non‑members (shared by all non‑members) — only when playing at TC Basel West (outdoor). Important: For indoor play, the additional court fee is charged on top of this.',
                 view_more: 'View more',
                 contact_us_button: 'Contact Me',
                 
