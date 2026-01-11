@@ -230,30 +230,38 @@ p {
     box-shadow: none;
 }
 
-/* GERMAN PAGE (index.html) - No .active class - DE is highlighted */
+/* DEFAULT STATE - Both labels start inactive */
+.switch-label.left,
+.switch-label.right {
+    color: rgba(255, 255, 255, 0.7);
+    background: transparent;
+    box-shadow: none;
+}
+
+/* GERMAN PAGE (index.html) - No .active class - DE (right) is highlighted */
 .language-switch:not(.active) .switch-label.right {
-    color: white;
-    background: var(--primary-color);
-    box-shadow: 0 2px 8px rgba(106, 126, 110, 0.4);
+    color: white !important;
+    background: var(--primary-color) !important;
+    box-shadow: 0 2px 8px rgba(106, 126, 110, 0.4) !important;
 }
 
 .language-switch:not(.active) .switch-label.left {
-    color: rgba(255, 255, 255, 0.7);
-    background: transparent;
-    box-shadow: none;
+    color: rgba(255, 255, 255, 0.7) !important;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
-/* ENGLISH PAGE (en.html) - Has .active class - EN is highlighted */
+/* ENGLISH PAGE (en.html) - Has .active class - EN (left) is highlighted */
 .language-switch.active .switch-label.left {
-    color: white;
-    background: var(--primary-color);
-    box-shadow: 0 2px 8px rgba(106, 126, 110, 0.4);
+    color: white !important;
+    background: var(--primary-color) !important;
+    box-shadow: 0 2px 8px rgba(106, 126, 110, 0.4) !important;
 }
 
 .language-switch.active .switch-label.right {
-    color: rgba(255, 255, 255, 0.7);
-    background: transparent;
-    box-shadow: none;
+    color: rgba(255, 255, 255, 0.7) !important;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
 /* Hide the old slider elements */
@@ -281,30 +289,30 @@ p {
     color: var(--text-secondary);
 }
 
-/* GERMAN PAGE scrolled - DE highlighted */
+/* GERMAN PAGE scrolled - DE (right) highlighted */
 .header.scrolled .language-switch:not(.active) .switch-label.right {
-    color: white;
-    background: var(--primary-color);
-    box-shadow: 0 2px 8px rgba(106, 126, 110, 0.3);
+    color: white !important;
+    background: var(--primary-color) !important;
+    box-shadow: 0 2px 8px rgba(106, 126, 110, 0.3) !important;
 }
 
 .header.scrolled .language-switch:not(.active) .switch-label.left {
-    color: var(--text-secondary);
-    background: transparent;
-    box-shadow: none;
+    color: var(--text-secondary) !important;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
-/* ENGLISH PAGE scrolled - EN highlighted */
+/* ENGLISH PAGE scrolled - EN (left) highlighted */
 .header.scrolled .language-switch.active .switch-label.left {
-    color: white;
-    background: var(--primary-color);
-    box-shadow: 0 2px 8px rgba(106, 126, 110, 0.3);
+    color: white !important;
+    background: var(--primary-color) !important;
+    box-shadow: 0 2px 8px rgba(106, 126, 110, 0.3) !important;
 }
 
 .header.scrolled .language-switch.active .switch-label.right {
-    color: var(--text-secondary);
-    background: transparent;
-    box-shadow: none;
+    color: var(--text-secondary) !important;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
 /* Tennis Ball Menu */
