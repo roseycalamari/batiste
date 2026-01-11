@@ -633,10 +633,9 @@
                 this.initializeBackToTopButton();
                 this.initializeGalleryModal();
                 
-                // Set initial state
+                // Set initial state - language UI is already set correctly in HTML
+                // No need to call updateLanguageSwitch() as the HTML state is correct
                 this.updateLanguageInterface();
-                this.updateLanguageSwitch();
-                this.updatePageContent();
                 
                 console.log('BG Tennisschule application successfully initialized');
             } catch (error) {
@@ -684,13 +683,15 @@
         }
 
         /**
-         * Initialize language system - Always defaults to German unless user explicitly changed it
+         * Initialize language system - Detect language from current page
          */
         initializeLanguageSystem() {
-            // If no stored language preference, always default to German
-            if (!this.state.currentLanguage) {
-                this.state.currentLanguage = 'de-CH';
-            }
+            // Detect language from current page URL
+            const currentPath = window.location.pathname;
+            const isEnglishPage = currentPath.includes('en.html');
+            
+            // Set language based on which page we're on
+            this.state.currentLanguage = isEnglishPage ? 'en' : 'de-CH';
             
             this.elements.html.lang = this.state.currentLanguage;
         }
@@ -763,35 +764,8 @@
                 }
             ];
 
-            // Language switch events
-            const languageSwitch = document.getElementById('languageSwitch');
-            if (languageSwitch) {
-                events.push({
-                    element: languageSwitch,
-                    event: 'click',
-                    handler: this.handleLanguageChange.bind(this)
-                });
-                
-                // Keyboard support
-                events.push({
-                    element: languageSwitch,
-                    event: 'keydown',
-                    handler: this.handleLanguageKeydown.bind(this)
-                });
-                
-                // Touch support for mobile
-                events.push({
-                    element: languageSwitch,
-                    event: 'touchstart',
-                    handler: this.handleTouchStart.bind(this)
-                });
-                
-                events.push({
-                    element: languageSwitch,
-                    event: 'touchend',
-                    handler: this.handleTouchEnd.bind(this)
-                });
-            }
+            // Language switch - no custom event handlers needed since it uses <a> tag navigation
+            // The link href handles the page switch, and the visual state is set in HTML
 
             // Navigation link events
             this.elements.navLinks.forEach(link => {
