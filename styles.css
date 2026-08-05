@@ -1705,14 +1705,17 @@ p {
     gap: 10px;
     margin-top: 0.9rem;
     padding: 12px 18px;
+    border: none;
     border-radius: 999px;
     text-decoration: none;
+    font-family: inherit;
     font-weight: 700;
     font-size: 0.9rem;
     letter-spacing: 0.3px;
     background: linear-gradient(135deg, var(--accent-color), #ff8a6e);
     color: #fff;
     box-shadow: 0 8px 20px rgba(255, 155, 132, 0.35);
+    cursor: pointer;
     transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
