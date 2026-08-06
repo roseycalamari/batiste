@@ -97,7 +97,7 @@
                 news5_title: 'Neues Design',
                 news5_text: 'Neuer Look für den TC Basel West: Eine Erfrischende Veränderung',
                 news6_alt: 'BATI Tenniscamp Antalya 2027',
-                news6_date: '5. August 2026',
+                news6_date: '28.03. – 04.04.2027',
                 news6_title: 'BATI Tenniscamp Antalya',
                 news6_text: 'Erlebe eine unvergessliche Woche voller Sport, Sonne und Spass in Antalya! Unser Tenniscamp verbindet professionelles Training mit Ultra All-inclusive, Flug & Transfer sowie Fitness und Wellness.',
                 
@@ -379,7 +379,7 @@
                 news5_title: 'New Design',
                 news5_text: 'A fresh new look for TC Basel West',
                 news6_alt: 'BATI Tennis Camp Antalya 2027',
-                news6_date: 'August 5, 2026',
+                news6_date: 'March 28 – April 4, 2027',
                 news6_title: 'BATI Tennis Camp Antalya',
                 news6_text: 'Experience an unforgettable week of sport, sun and fun in Antalya! Our tennis camp combines professional training with ultra all-inclusive, flights & transfer, plus fitness and wellness.',
                 
