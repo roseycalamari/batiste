@@ -260,7 +260,16 @@
             <div class="container">
                 <h1 class="hero-title">Tennis School Batiste Guerra</h1>
                 <p class="hero-subtitle">More than just tennis</p>
-                <button class="cta-button" onclick="scrollToSection('about')">About Me</button>
+                <div class="hero-actions">
+                    <span class="hero-camp-badge">BATI Tennis Camp Antalya · 28 Mar–4 Apr 2027</span>
+                    <div class="hero-buttons">
+                        <a class="cta-button cta-button--camp" href="https://tcbaselwest.webling.ch/forms/memberform/c0726167200b129e572e" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-clipboard-check" aria-hidden="true"></i>
+                            <span>Register for Camp Now</span>
+                        </a>
+                        <button class="cta-button cta-button--secondary" onclick="scrollToSection('about')">About Me</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -817,6 +826,36 @@
             </div>
         </div>
     </div>
+
+    <!-- Camp promo modal (first visit) -->
+    <div class="camp-modal" id="campPromoModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="campModalTitle">
+        <div class="camp-modal-overlay" data-camp-modal-dismiss></div>
+        <div class="camp-modal-dialog">
+            <button class="camp-modal-close" id="campModalClose" type="button" aria-label="Close" data-key="camp_modal_close">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <div class="camp-modal-media">
+                <img src="images/WhatsApp Image 2026-05-20 at 13.59.48.jpg" alt="BATI Tennis Camp Antalya 2027" data-key="camp_modal_image_alt">
+            </div>
+            <div class="camp-modal-body">
+                <span class="camp-modal-badge" data-key="hero_camp_badge">BATI Tennis Camp Antalya · 28 Mar–4 Apr 2027</span>
+                <h2 id="campModalTitle" data-key="camp_modal_title">BATI Tennis Camp Antalya</h2>
+                <p class="camp-modal-dates" data-key="camp_modal_dates">28 March – 4 April 2027</p>
+                <p class="camp-modal-text" data-key="camp_modal_text">Secure your spot: ultra all-inclusive, flights &amp; transfer included – tennis, sun and community in Turkey.</p>
+                <a class="cta-button cta-button--camp camp-modal-cta" id="campModalCta" href="https://tcbaselwest.webling.ch/forms/memberform/c0726167200b129e572e" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-clipboard-check" aria-hidden="true"></i>
+                    <span data-key="hero_camp_cta">Register for Camp Now</span>
+                </a>
+                <button class="camp-modal-later" id="campModalLater" type="button" data-key="camp_modal_later">Maybe later</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating camp register button -->
+    <a class="camp-float-cta" id="campFloatingCta" href="https://tcbaselwest.webling.ch/forms/memberform/c0726167200b129e572e" target="_blank" rel="noopener noreferrer" aria-label="Register for Camp Now">
+        <i class="fas fa-clipboard-check" aria-hidden="true"></i>
+        <span data-key="camp_float_cta">Register now</span>
+    </a>
 
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">

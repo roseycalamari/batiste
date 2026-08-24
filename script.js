@@ -16,6 +16,9 @@
         debounceDelay: 16,
         formSubmissionDelay: 2000,
         messageDisplayDuration: 5000,
+        campModalDelay: 800,
+        campFloatThreshold: 300,
+        campPromoStorageKey: 'bg-antalya-camp-modal-seen',
         breakpoints: {
             mobile: 768,
             tablet: 1024,
@@ -47,7 +50,8 @@
                 heroHeight: 0,
                 galleryImages: [],
                 currentImageIndex: 0,
-                isGalleryModalOpen: false
+                isGalleryModalOpen: false,
+                isCampModalOpen: false
             };
             
             this.elements = {};
@@ -174,6 +178,15 @@
                 hero_title: 'Tennisschule Batiste Guerra',
                 hero_subtitle: 'Mehr als nur Tennis',
                 hero_cta: 'Über mich',
+                hero_camp_badge: 'BATI Tenniscamp Antalya · 28.03.–04.04.2027',
+                hero_camp_cta: 'Jetzt zum Camp anmelden',
+                camp_modal_title: 'BATI Tenniscamp Antalya',
+                camp_modal_dates: '28. März – 04. April 2027',
+                camp_modal_text: 'Sichere dir deinen Platz: Ultra All-inclusive, Flug & Transfer inklusive – Tennis, Sonne und Gemeinschaft in der Türkei.',
+                camp_modal_later: 'Vielleicht später',
+                camp_modal_close: 'Schliessen',
+                camp_modal_image_alt: 'BATI Tenniscamp Antalya 2027',
+                camp_float_cta: 'Jetzt anmelden',
 
                 // About Section
                 about_title: 'Über mich',
@@ -456,6 +469,15 @@
                 hero_title: 'Tennis School Batiste Guerra',
                 hero_subtitle: 'More than just tennis',
                 hero_cta: 'About Me',
+                hero_camp_badge: 'BATI Tennis Camp Antalya · 28 Mar–4 Apr 2027',
+                hero_camp_cta: 'Register for Camp Now',
+                camp_modal_title: 'BATI Tennis Camp Antalya',
+                camp_modal_dates: '28 March – 4 April 2027',
+                camp_modal_text: 'Secure your spot: ultra all-inclusive, flights & transfer included – tennis, sun and community in Turkey.',
+                camp_modal_later: 'Maybe later',
+                camp_modal_close: 'Close',
+                camp_modal_image_alt: 'BATI Tennis Camp Antalya 2027',
+                camp_float_cta: 'Register now',
 
                 // About Section
                 about_title: 'About Me',
@@ -642,6 +664,7 @@
                 this.initializeHeaderSlideBehavior();
                 this.initializeBackToTopButton();
                 this.initializeGalleryModal();
+                this.initializeCampPromo();
                 
                 // Set initial state - language UI is already set correctly in HTML
                 // No need to call updateLanguageSwitch() as the HTML state is correct
@@ -668,6 +691,12 @@
                 navLinks: document.querySelectorAll('a[href^="#"]'),
                 fadeElements: document.querySelectorAll('.fade-in'),
                 backToTopButton: document.getElementById('backToTop'),
+                campPromoModal: document.getElementById('campPromoModal'),
+                campModalOverlay: document.querySelector('[data-camp-modal-dismiss]'),
+                campModalClose: document.getElementById('campModalClose'),
+                campModalLater: document.getElementById('campModalLater'),
+                campModalCta: document.getElementById('campModalCta'),
+                campFloatingCta: document.getElementById('campFloatingCta'),
                 galleryItems: document.querySelectorAll('.gallery-item'),
                 galleryModal: document.getElementById('galleryModal'),
                 galleryModalImage: document.getElementById('galleryModalImage'),
@@ -865,7 +894,9 @@
         handleKeyboardNavigation(event) {
             switch (event.key) {
                 case 'Escape':
-                    if (this.state.isMenuOpen) {
+                    if (this.state.isCampModalOpen) {
+                        this.closeCampModal();
+                    } else if (this.state.isMenuOpen) {
                         this.closeMobileMenu();
                     }
                     break;
@@ -1094,8 +1125,9 @@
                     this.handleHeaderSlide(scrollTop, scrollDirection);
                 }
                 
-                // Update back to top button visibility
+                // Update back to top and camp floating button visibility
                 this.updateBackToTopButton(scrollTop);
+                this.updateCampFloatingButton(scrollTop);
                 
                 this.state.lastScrollTop = scrollTop;
                 this.state.isScrolling = false;
@@ -1821,6 +1853,99 @@
             setTimeout(() => {
                 this.elements.backToTopButton.style.transform = '';
             }, 150);
+        }
+
+        /**
+         * First-visit camp promo modal and floating register button
+         */
+        initializeCampPromo() {
+            this.initializeCampFloatingButton();
+            this.initializeCampModal();
+        }
+
+        initializeCampFloatingButton() {
+            if (!this.elements.campFloatingCta) return;
+            this.updateCampFloatingButton(window.pageYOffset || document.documentElement.scrollTop);
+        }
+
+        updateCampFloatingButton(scrollTop) {
+            const button = this.elements.campFloatingCta;
+            if (!button) return;
+
+            const isVisible = scrollTop > CONFIG.campFloatThreshold && !this.state.isCampModalOpen;
+
+            button.classList.toggle('visible', isVisible);
+            document.body.classList.toggle('camp-float-visible', isVisible);
+        }
+
+        initializeCampModal() {
+            const modal = this.elements.campPromoModal;
+            if (!modal) return;
+
+            const dismiss = this.closeCampModal.bind(this);
+
+            this.elements.campModalClose?.addEventListener('click', dismiss);
+            this.elements.campModalLater?.addEventListener('click', dismiss);
+            this.elements.campModalOverlay?.addEventListener('click', dismiss);
+            this.elements.campModalCta?.addEventListener('click', () => {
+                this.closeCampModal();
+            });
+
+            if (this.hasSeenCampModal()) return;
+
+            window.setTimeout(() => {
+                this.openCampModal();
+            }, CONFIG.campModalDelay);
+        }
+
+        hasSeenCampModal() {
+            try {
+                return localStorage.getItem(CONFIG.campPromoStorageKey) === '1';
+            } catch (error) {
+                return false;
+            }
+        }
+
+        markCampModalSeen() {
+            try {
+                localStorage.setItem(CONFIG.campPromoStorageKey, '1');
+            } catch (error) {
+                console.warn('Could not save camp promo preference:', error);
+            }
+        }
+
+        openCampModal() {
+            const modal = this.elements.campPromoModal;
+            if (!modal || this.state.isCampModalOpen) return;
+
+            this.state.isCampModalOpen = true;
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('camp-modal-open');
+
+            if (!document.body.classList.contains('menu-open')) {
+                document.body.style.overflow = 'hidden';
+            }
+
+            this.updateCampFloatingButton(window.pageYOffset || document.documentElement.scrollTop);
+            this.elements.campModalClose?.focus();
+        }
+
+        closeCampModal() {
+            const modal = this.elements.campPromoModal;
+            if (!modal || !this.state.isCampModalOpen) return;
+
+            this.state.isCampModalOpen = false;
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('camp-modal-open');
+            this.markCampModalSeen();
+
+            if (!document.body.classList.contains('menu-open')) {
+                document.body.style.overflow = '';
+            }
+
+            this.updateCampFloatingButton(window.pageYOffset || document.documentElement.scrollTop);
         }
 
         /**
