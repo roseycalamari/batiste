@@ -237,6 +237,42 @@
                 view_more: 'Mehr erfahren',
                 view_flyer: 'Flyer ansehen',
                 contact_us_button: 'Kontaktieren Sie mich',
+                book_now: 'Jetzt buchen',
+                book_now_confirm: 'Bestätigen',
+                book_now_hint: 'Die Angaben gehen direkt als WhatsApp-Nachricht an Batiste.',
+                book_now_name: 'Name',
+                book_now_lesson: 'Lektion',
+                book_now_lesson_ph: 'Lektion wählen',
+                book_now_level: 'Spielniveau',
+                book_now_level_ph: 'Niveau wählen',
+                book_now_date: 'Wunschdatum',
+                book_now_time: 'Wunschzeit',
+                book_now_note: 'Nachricht',
+                book_now_name_required: 'Bitte Namen angeben.',
+                book_level_beginner: 'Anfänger',
+                book_level_intermediate: 'Mittelstufe',
+                book_level_advanced: 'Fortgeschritten',
+                book_level_competition: 'Wettkampf',
+                book_j_private: 'Privat — 95 CHF',
+                book_j_semi: 'Semi-privat — 50 CHF',
+                book_j_3: 'Gruppe, 3 Personen — 35 CHF pro Person',
+                book_j_4: 'Gruppe, 4 Personen — 30 CHF pro Person',
+                book_j_5: 'Gruppe, 5 Personen — 25 CHF pro Person',
+                book_a_private: 'Privat — 95 CHF',
+                book_a_semi: 'Semi-privat — 50 CHF',
+                book_a_3: 'Gruppe, 3 Personen — 40 CHF pro Person',
+                book_a_4: 'Gruppe, 4 Personen — 35 CHF pro Person',
+                book_a_5: 'Gruppe, 5 Personen — 30 CHF pro Person',
+                book_wa_greeting: 'Hallo Batiste,',
+                book_wa_intro: 'ich möchte gerne eine Tennisstunde buchen:',
+                book_wa_program: 'Programm',
+                book_wa_name: 'Name',
+                book_wa_lesson: 'Lektion',
+                book_wa_level: 'Spielniveau',
+                book_wa_date: 'Wunschdatum',
+                book_wa_time: 'Wunschzeit',
+                book_wa_note: 'Nachricht',
+                book_wa_outro: '55 Minuten pro Einheit.\nIch freue mich auf Ihre Rückmeldung!',
                 
                 // Coach Section
                 coach_name: 'Batiste Guerra',
@@ -528,6 +564,42 @@
                 view_more: 'View more',
                 view_flyer: 'View flyer',
                 contact_us_button: 'Contact Me',
+                book_now: 'Book now',
+                book_now_confirm: 'Confirm',
+                book_now_hint: 'Your details go straight to Batiste on WhatsApp.',
+                book_now_name: 'Name',
+                book_now_lesson: 'Lesson',
+                book_now_lesson_ph: 'Choose a lesson',
+                book_now_level: 'Player level',
+                book_now_level_ph: 'Choose a level',
+                book_now_date: 'Preferred date',
+                book_now_time: 'Preferred time',
+                book_now_note: 'Note',
+                book_now_name_required: 'Please enter a name.',
+                book_level_beginner: 'Beginner',
+                book_level_intermediate: 'Intermediate',
+                book_level_advanced: 'Advanced',
+                book_level_competition: 'Competition',
+                book_j_private: 'Private — 95 CHF',
+                book_j_semi: 'Semi-private — 50 CHF',
+                book_j_3: 'Group, 3 people — 35 CHF per person',
+                book_j_4: 'Group, 4 people — 30 CHF per person',
+                book_j_5: 'Group, 5 people — 25 CHF per person',
+                book_a_private: 'Private — 95 CHF',
+                book_a_semi: 'Semi-private — 50 CHF',
+                book_a_3: 'Group, 3 people — 40 CHF per person',
+                book_a_4: 'Group, 4 people — 35 CHF per person',
+                book_a_5: 'Group, 5 people — 30 CHF per person',
+                book_wa_greeting: 'Hi Batiste,',
+                book_wa_intro: 'I would like to book a tennis lesson:',
+                book_wa_program: 'Programme',
+                book_wa_name: 'Name',
+                book_wa_lesson: 'Lesson',
+                book_wa_level: 'Player level',
+                book_wa_date: 'Preferred date',
+                book_wa_time: 'Preferred time',
+                book_wa_note: 'Note',
+                book_wa_outro: '55 minutes per session.\nLooking forward to hearing from you!',
                 
                 // Coach Section
                 coach_name: 'Batiste Guerra',
@@ -665,6 +737,7 @@
                 this.initializeBackToTopButton();
                 this.initializeGalleryModal();
                 this.initializeCampPromo();
+                this.initializeBookingForms();
                 
                 // Set initial state - language UI is already set correctly in HTML
                 // No need to call updateLanguageSwitch() as the HTML state is correct
@@ -1853,6 +1926,135 @@
             setTimeout(() => {
                 this.elements.backToTopButton.style.transform = '';
             }, 150);
+        }
+
+        /**
+         * Lesson booking forms that open a ready WhatsApp message
+         */
+        initializeBookingForms() {
+            const blocks = document.querySelectorAll('.book-now');
+            if (!blocks.length) return;
+
+            const now = new Date();
+            const today = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+
+            blocks.forEach((block) => {
+                const toggle = block.querySelector('.book-now-toggle');
+                const panel = block.querySelector('.book-now-panel');
+                const form = block.querySelector('.book-now-form');
+                const dateInput = form.querySelector('input[type="date"]');
+                const nameInput = form.querySelector('[name="name"]');
+
+                if (dateInput) dateInput.min = today;
+
+                const setOpen = (open) => {
+                    block.classList.toggle('is-open', open);
+                    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+                    panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+                    if (open) {
+                        panel.removeAttribute('inert');
+                    } else {
+                        panel.setAttribute('inert', '');
+                    }
+                };
+
+                nameInput.addEventListener('input', () => nameInput.setCustomValidity(''));
+
+                toggle.addEventListener('click', () => {
+                    const willOpen = !block.classList.contains('is-open');
+
+                    if (willOpen) {
+                        blocks.forEach((other) => {
+                            if (other === block || !other.classList.contains('is-open')) return;
+                            other.classList.remove('is-open');
+                            other.querySelector('.book-now-toggle').setAttribute('aria-expanded', 'false');
+                            const otherPanel = other.querySelector('.book-now-panel');
+                            otherPanel.setAttribute('aria-hidden', 'true');
+                            otherPanel.setAttribute('inert', '');
+                        });
+                    }
+
+                    setOpen(willOpen);
+
+                    if (willOpen) {
+                        window.setTimeout(() => {
+                            panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                            nameInput.focus({ preventScroll: true });
+                        }, 280);
+                    }
+                });
+
+                form.addEventListener('submit', (event) => {
+                    event.preventDefault();
+
+                    if (!nameInput.value.trim()) {
+                        nameInput.setCustomValidity(this.getTranslation('book_now_name_required'));
+                        nameInput.reportValidity();
+                        return;
+                    }
+
+                    nameInput.setCustomValidity('');
+                    if (!form.reportValidity()) return;
+
+                    window.open(this.buildBookingWhatsAppUrl(block, form), '_blank', 'noopener,noreferrer');
+                });
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key !== 'Escape') return;
+                const open = document.querySelector('.book-now.is-open');
+                if (!open) return;
+                const toggle = open.querySelector('.book-now-toggle');
+                const panel = open.querySelector('.book-now-panel');
+                open.classList.remove('is-open');
+                toggle.setAttribute('aria-expanded', 'false');
+                panel.setAttribute('aria-hidden', 'true');
+                panel.setAttribute('inert', '');
+                toggle.focus();
+            });
+        }
+
+        buildBookingWhatsAppUrl(block, form) {
+            const t = (key) => this.getTranslation(key);
+            const program = block.closest('.age-card')?.querySelector('.card-title')?.textContent.trim() || '';
+            const name = form.querySelector('[name="name"]').value.trim();
+            const lesson = form.querySelector('[name="lesson"]').selectedOptions[0]?.textContent.trim() || '';
+            const level = form.querySelector('[name="level"]').selectedOptions[0]?.textContent.trim() || '';
+            const dateValue = form.querySelector('[name="date"]').value;
+            const timeValue = form.querySelector('[name="time"]').value;
+            const note = form.querySelector('[name="note"]').value.trim();
+            const locale = this.state.currentLanguage === 'en' ? 'en-GB' : 'de-CH';
+
+            let dateLabel = dateValue;
+            if (dateValue) {
+                dateLabel = new Date(`${dateValue}T12:00:00`).toLocaleDateString(locale, {
+                    weekday: 'long',
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric'
+                });
+            }
+
+            const lines = [
+                t('book_wa_greeting'),
+                '',
+                t('book_wa_intro'),
+                '',
+                `${t('book_wa_program')}: ${program}`,
+                `${t('book_wa_name')}: ${name}`,
+                `${t('book_wa_lesson')}: ${lesson}`,
+                `${t('book_wa_level')}: ${level}`,
+                `${t('book_wa_date')}: ${dateLabel}`,
+                `${t('book_wa_time')}: ${timeValue}`
+            ];
+
+            if (note) {
+                lines.push(`${t('book_wa_note')}: ${note}`);
+            }
+
+            lines.push('', t('book_wa_outro'));
+
+            return `https://wa.me/41762120297?text=${encodeURIComponent(lines.join('\n'))}`;
         }
 
         /**

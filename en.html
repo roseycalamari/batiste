@@ -381,10 +381,65 @@
                             </div>
                         </div>
                     </div>
-                    <button class="card-cta" onclick="scrollToSection('contact')">
-                        <i class="fas fa-envelope"></i>
-                        <span>Contact Me</span>
-                    </button>
+                    <div class="book-now">
+                        <button type="button" class="card-cta book-now-toggle" aria-expanded="false" aria-controls="book-juniors-panel">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            <span data-key="book_now">Book now</span>
+                            <i class="fas fa-chevron-down book-now-chevron" aria-hidden="true"></i>
+                        </button>
+                        <div class="book-now-panel" id="book-juniors-panel" aria-hidden="true" inert>
+                            <div class="book-now-panel-inner">
+                                <form class="book-now-form">
+                                    <p class="book-now-hint" data-key="book_now_hint">Your details go straight to Batiste on WhatsApp.</p>
+                                    <div class="book-now-field">
+                                        <label for="book-juniors-name" data-key="book_now_name">Name</label>
+                                        <input id="book-juniors-name" name="name" type="text" autocomplete="name" required maxlength="80" placeholder="First and last name">
+                                    </div>
+                                    <div class="book-now-field">
+                                        <label for="book-juniors-lesson" data-key="book_now_lesson">Lesson</label>
+                                        <select id="book-juniors-lesson" name="lesson" required>
+                                            <option value="" disabled selected data-key="book_now_lesson_ph">Choose a lesson</option>
+                                            <optgroup label="Private lessons">
+                                                <option data-key="book_j_private">Private — 95 CHF</option>
+                                                <option data-key="book_j_semi">Semi-private — 50 CHF</option>
+                                            </optgroup>
+                                            <optgroup label="Group lessons">
+                                                <option data-key="book_j_3">Group, 3 people — 35 CHF per person</option>
+                                                <option data-key="book_j_4">Group, 4 people — 30 CHF per person</option>
+                                                <option data-key="book_j_5">Group, 5 people — 25 CHF per person</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                    <div class="book-now-field">
+                                        <label for="book-juniors-level" data-key="book_now_level">Player level</label>
+                                        <select id="book-juniors-level" name="level" required>
+                                            <option value="" disabled selected data-key="book_now_level_ph">Choose a level</option>
+                                            <option data-key="book_level_beginner">Beginner</option>
+                                            <option data-key="book_level_intermediate">Intermediate</option>
+                                            <option data-key="book_level_advanced">Advanced</option>
+                                            <option data-key="book_level_competition">Competition</option>
+                                        </select>
+                                    </div>
+                                    <div class="book-now-field">
+                                        <label for="book-juniors-date" data-key="book_now_date">Preferred date</label>
+                                        <input id="book-juniors-date" name="date" type="date" required>
+                                    </div>
+                                    <div class="book-now-field">
+                                        <label for="book-juniors-time" data-key="book_now_time">Preferred time</label>
+                                        <input id="book-juniors-time" name="time" type="time" required step="900">
+                                    </div>
+                                    <div class="book-now-field">
+                                        <label for="book-juniors-note" data-key="book_now_note">Note</label>
+                                        <textarea id="book-juniors-note" name="note" rows="2" maxlength="400" placeholder="Optional"></textarea>
+                                    </div>
+                                    <button type="submit" class="book-now-confirm">
+                                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                        <span data-key="book_now_confirm">Confirm</span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="age-card">
@@ -425,10 +480,65 @@
                             </div>
                         </div>
                     </div>
-                    <button class="card-cta" onclick="scrollToSection('contact')">
-                        <i class="fas fa-envelope"></i>
-                        <span>Contact Me</span>
-                    </button>
+                    <div class="book-now">
+                        <button type="button" class="card-cta book-now-toggle" aria-expanded="false" aria-controls="book-adults-panel">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            <span data-key="book_now">Book now</span>
+                            <i class="fas fa-chevron-down book-now-chevron" aria-hidden="true"></i>
+                        </button>
+                        <div class="book-now-panel" id="book-adults-panel" aria-hidden="true" inert>
+                            <div class="book-now-panel-inner">
+                                <form class="book-now-form">
+                                    <p class="book-now-hint" data-key="book_now_hint">Your details go straight to Batiste on WhatsApp.</p>
+                                    <div class="book-now-field">
+                                        <label for="book-adults-name" data-key="book_now_name">Name</label>
+                                        <input id="book-adults-name" name="name" type="text" autocomplete="name" required maxlength="80" placeholder="First and last name">
+                                    </div>
+                                    <div class="book-now-field">
+                                        <label for="book-adults-lesson" data-key="book_now_lesson">Lesson</label>
+                                        <select id="book-adults-lesson" name="lesson" required>
+                                            <option value="" disabled selected data-key="book_now_lesson_ph">Choose a lesson</option>
+                                            <optgroup label="Private lessons">
+                                                <option data-key="book_a_private">Private — 95 CHF</option>
+                                                <option data-key="book_a_semi">Semi-private — 50 CHF</option>
+                                            </optgroup>
+                                            <optgroup label="Group lessons">
+                                                <option data-key="book_a_3">Group, 3 people — 40 CHF per person</option>
+                                                <option data-key="book_a_4">Group, 4 people — 35 CHF per person</option>
+                                                <option data-key="book_a_5">Group, 5 people — 30 CHF per person</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                    <div class="book-now-field">
+                                        <label for="book-adults-level" data-key="book_now_level">Player level</label>
+                                        <select id="book-adults-level" name="level" required>
+                                            <option value="" disabled selected data-key="book_now_level_ph">Choose a level</option>
+                                            <option data-key="book_level_beginner">Beginner</option>
+                                            <option data-key="book_level_intermediate">Intermediate</option>
+                                            <option data-key="book_level_advanced">Advanced</option>
+                                            <option data-key="book_level_competition">Competition</option>
+                                        </select>
+                                    </div>
+                                    <div class="book-now-field">
+                                        <label for="book-adults-date" data-key="book_now_date">Preferred date</label>
+                                        <input id="book-adults-date" name="date" type="date" required>
+                                    </div>
+                                    <div class="book-now-field">
+                                        <label for="book-adults-time" data-key="book_now_time">Preferred time</label>
+                                        <input id="book-adults-time" name="time" type="time" required step="900">
+                                    </div>
+                                    <div class="book-now-field">
+                                        <label for="book-adults-note" data-key="book_now_note">Note</label>
+                                        <textarea id="book-adults-note" name="note" rows="2" maxlength="400" placeholder="Optional"></textarea>
+                                    </div>
+                                    <button type="submit" class="book-now-confirm">
+                                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                        <span data-key="book_now_confirm">Confirm</span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>

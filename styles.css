@@ -1032,6 +1032,10 @@ p {
     margin-right: auto;
 }
 
+.cards-container:has(.book-now.is-open) {
+    align-items: flex-start;
+}
+
 .age-card {
     background: var(--primary-color);
     border-radius: 20px;
@@ -1050,7 +1054,13 @@ p {
 }
 
 /* Re-enable pointer events for interactive elements within cards */
-.age-card .card-cta {
+.age-card .card-cta,
+.age-card .book-now,
+.age-card .book-now-form,
+.age-card .book-now-field input,
+.age-card .book-now-field select,
+.age-card .book-now-field textarea,
+.age-card .book-now-confirm {
     pointer-events: auto;
 }
 
@@ -1207,6 +1217,172 @@ p {
 
 .card-cta i {
     font-size: 0.8rem;
+}
+
+.book-now {
+    margin-top: 1.5rem;
+}
+
+.book-now .card-cta {
+    margin-top: 0;
+    position: relative;
+}
+
+.book-now-toggle .fa-whatsapp {
+    color: #25D366;
+    font-size: 1.05rem;
+}
+
+.book-now-chevron {
+    position: absolute;
+    right: 1.1rem;
+    font-size: 0.75rem;
+    transition: transform 0.35s ease;
+}
+
+.book-now.is-open .book-now-chevron {
+    transform: rotate(180deg);
+}
+
+.book-now.is-open .book-now-toggle {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.28);
+}
+
+.book-now-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    margin-top: 0;
+    transition: grid-template-rows 0.45s cubic-bezier(0.4, 0, 0.2, 1), margin-top 0.45s ease;
+}
+
+.book-now.is-open .book-now-panel {
+    grid-template-rows: 1fr;
+    margin-top: 0.85rem;
+}
+
+.book-now-panel-inner {
+    overflow: hidden;
+    min-height: 0;
+}
+
+.book-now-form {
+    background: #ffffff;
+    color: var(--text-primary);
+    border-radius: 14px;
+    padding: 1rem 0.95rem 0.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.book-now.is-open .book-now-form {
+    opacity: 1;
+    transform: none;
+}
+
+.book-now-hint {
+    margin: 0;
+    font-size: 0.78rem;
+    line-height: 1.45;
+    color: var(--text-secondary);
+}
+
+.book-now-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.28rem;
+}
+
+.book-now-field label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.book-now-field:has(input[required]) label::after,
+.book-now-field:has(select[required]) label::after {
+    content: " *";
+    color: var(--accent-color);
+}
+
+.book-now-field input,
+.book-now-field select,
+.book-now-field textarea {
+    width: 100%;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-primary);
+    background: #f6f7f5;
+    border: 1.5px solid rgba(106, 126, 110, 0.28);
+    border-radius: 10px;
+    padding: 0.62rem 0.75rem;
+    min-height: 44px;
+    color-scheme: light;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.book-now-field textarea {
+    min-height: 72px;
+    resize: vertical;
+}
+
+.book-now-field select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236a7e6e' d='M1.4.6 6 5.2 10.6.6 12 2 6 8 0 2z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 10px;
+    padding-right: 2rem;
+}
+
+.book-now-field input:focus,
+.book-now-field select:focus,
+.book-now-field textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(106, 126, 110, 0.16);
+}
+
+.book-now-field input:user-invalid,
+.book-now-field select:user-invalid,
+.book-now-field textarea:user-invalid {
+    border-color: #c45c4a;
+}
+
+.book-now-confirm {
+    margin-top: 0.15rem;
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    background: #25D366;
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.85rem 1rem;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.book-now-confirm:hover {
+    background: #1ebe5a;
+    transform: translateY(-1px);
+}
+
+.book-now-confirm .fa-whatsapp {
+    font-size: 1.05rem;
 }
 
 @keyframes fadeInUp {
