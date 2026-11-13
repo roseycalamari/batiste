@@ -237,7 +237,7 @@
                 view_more: 'Mehr erfahren',
                 view_flyer: 'Flyer ansehen',
                 contact_us_button: 'Kontaktieren Sie mich',
-                book_now: 'Jetzt buchen',
+                book_now: 'Anfrage senden',
                 book_now_confirm: 'Bestätigen',
                 book_now_whatsapp: 'WhatsApp',
                 book_now_email: 'E-Mail',
@@ -567,7 +567,7 @@
                 view_more: 'View more',
                 view_flyer: 'View flyer',
                 contact_us_button: 'Contact Me',
-                book_now: 'Book now',
+                book_now: 'Send request',
                 book_now_confirm: 'Confirm',
                 book_now_whatsapp: 'WhatsApp',
                 book_now_email: 'Email',
@@ -764,6 +764,7 @@
                 header: document.getElementById('header'),
                 hamburger: document.getElementById('hamburger'),
                 menuClose: document.getElementById('menuClose'),
+                menuBackdrop: document.getElementById('menuBackdrop'),
                 offCanvasMenu: document.getElementById('offCanvasMenu'),
                 contactForm: document.getElementById('contactForm'),
                 langButtons: document.querySelectorAll('.lang-btn'),
@@ -827,6 +828,11 @@
                 },
                 {
                     element: this.elements.menuClose,
+                    event: 'click',
+                    handler: this.closeMobileMenu.bind(this)
+                },
+                {
+                    element: this.elements.menuBackdrop,
                     event: 'click',
                     handler: this.closeMobileMenu.bind(this)
                 },
