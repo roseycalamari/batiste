@@ -1060,7 +1060,8 @@ p {
 .age-card .book-now-field input,
 .age-card .book-now-field select,
 .age-card .book-now-field textarea,
-.age-card .book-now-confirm {
+.age-card .book-now-confirm,
+.age-card .book-now-email {
     pointer-events: auto;
 }
 
@@ -1228,11 +1229,6 @@ p {
     position: relative;
 }
 
-.book-now-toggle .fa-whatsapp {
-    color: #25D366;
-    font-size: 1.05rem;
-}
-
 .book-now-chevron {
     position: absolute;
     right: 1.1rem;
@@ -1356,13 +1352,18 @@ p {
     border-color: #c45c4a;
 }
 
-.book-now-confirm {
+.book-now-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
     margin-top: 0.15rem;
+}
+
+.book-now-confirm,
+.book-now-email {
     width: 100%;
     border: none;
     border-radius: 12px;
-    background: #25D366;
-    color: #fff;
     font-family: inherit;
     font-size: 0.95rem;
     font-weight: 700;
@@ -1373,7 +1374,12 @@ p {
     justify-content: center;
     gap: 0.45rem;
     cursor: pointer;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.book-now-confirm {
+    background: #25D366;
+    color: #fff;
 }
 
 .book-now-confirm:hover {
@@ -1381,8 +1387,20 @@ p {
     transform: translateY(-1px);
 }
 
-.book-now-confirm .fa-whatsapp {
+.book-now-confirm .fa-whatsapp,
+.book-now-email .fa-envelope {
     font-size: 1.05rem;
+}
+
+.book-now-email {
+    background: #fff;
+    color: var(--primary-color);
+    border: 1.5px solid rgba(106, 126, 110, 0.35);
+}
+
+.book-now-email:hover {
+    background: #f3f6f3;
+    transform: translateY(-1px);
 }
 
 @keyframes fadeInUp {
@@ -3813,6 +3831,10 @@ p {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 3px;
+}
+
+.contact-card a[href*="instagram.com"] {
+    hyphens: manual !important;
 }
 
 .map-container {

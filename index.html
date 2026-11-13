@@ -122,14 +122,14 @@
         }
       },
       "sameAs": [
-        "https://www.instagram.com/eltigre_333/"
+        "https://www.instagram.com/tennisschule_batisteguerra/"
       ],
       "founder": {
         "@type": "Person",
         "name": "Batiste Guerra",
         "jobTitle": "Head Tennis Coach & Founder",
         "description": "ITF Tour Player, Competition Coach C License, over 10 years coaching experience",
-        "sameAs": "https://www.instagram.com/eltigre_333/"
+        "sameAs": "https://www.instagram.com/tennisschule_batisteguerra/"
       },
       "sport": "Tennis",
       "makesOffer": [
@@ -383,14 +383,13 @@
                     </div>
                     <div class="book-now">
                         <button type="button" class="card-cta book-now-toggle" aria-expanded="false" aria-controls="book-juniors-panel">
-                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
                             <span data-key="book_now">Jetzt buchen</span>
                             <i class="fas fa-chevron-down book-now-chevron" aria-hidden="true"></i>
                         </button>
                         <div class="book-now-panel" id="book-juniors-panel" aria-hidden="true" inert>
                             <div class="book-now-panel-inner">
                                 <form class="book-now-form">
-                                    <p class="book-now-hint" data-key="book_now_hint">Die Angaben gehen direkt als WhatsApp-Nachricht an Batiste.</p>
+                                    <p class="book-now-hint" data-key="book_now_hint">Die Angaben gehen direkt an Batiste, per WhatsApp oder E-Mail.</p>
                                     <div class="book-now-field">
                                         <label for="book-juniors-name" data-key="book_now_name">Name</label>
                                         <input id="book-juniors-name" name="name" type="text" autocomplete="name" required maxlength="80" placeholder="Vor- und Nachname">
@@ -432,10 +431,16 @@
                                         <label for="book-juniors-note" data-key="book_now_note">Nachricht</label>
                                         <textarea id="book-juniors-note" name="note" rows="2" maxlength="400" placeholder="Optional"></textarea>
                                     </div>
-                                    <button type="submit" class="book-now-confirm">
-                                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                                        <span data-key="book_now_confirm">Bestätigen</span>
-                                    </button>
+                                    <div class="book-now-actions">
+                                        <button type="submit" class="book-now-confirm" data-channel="whatsapp">
+                                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                            <span data-key="book_now_whatsapp">WhatsApp</span>
+                                        </button>
+                                        <button type="submit" class="book-now-email" data-channel="email">
+                                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                                            <span data-key="book_now_email">E-Mail</span>
+                                        </button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -482,14 +487,13 @@
                     </div>
                     <div class="book-now">
                         <button type="button" class="card-cta book-now-toggle" aria-expanded="false" aria-controls="book-adults-panel">
-                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
                             <span data-key="book_now">Jetzt buchen</span>
                             <i class="fas fa-chevron-down book-now-chevron" aria-hidden="true"></i>
                         </button>
                         <div class="book-now-panel" id="book-adults-panel" aria-hidden="true" inert>
                             <div class="book-now-panel-inner">
                                 <form class="book-now-form">
-                                    <p class="book-now-hint" data-key="book_now_hint">Die Angaben gehen direkt als WhatsApp-Nachricht an Batiste.</p>
+                                    <p class="book-now-hint" data-key="book_now_hint">Die Angaben gehen direkt an Batiste, per WhatsApp oder E-Mail.</p>
                                     <div class="book-now-field">
                                         <label for="book-adults-name" data-key="book_now_name">Name</label>
                                         <input id="book-adults-name" name="name" type="text" autocomplete="name" required maxlength="80" placeholder="Vor- und Nachname">
@@ -531,10 +535,16 @@
                                         <label for="book-adults-note" data-key="book_now_note">Nachricht</label>
                                         <textarea id="book-adults-note" name="note" rows="2" maxlength="400" placeholder="Optional"></textarea>
                                     </div>
-                                    <button type="submit" class="book-now-confirm">
-                                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                                        <span data-key="book_now_confirm">Bestätigen</span>
-                                    </button>
+                                    <div class="book-now-actions">
+                                        <button type="submit" class="book-now-confirm" data-channel="whatsapp">
+                                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                            <span data-key="book_now_whatsapp">WhatsApp</span>
+                                        </button>
+                                        <button type="submit" class="book-now-email" data-channel="email">
+                                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                                            <span data-key="book_now_email">E-Mail</span>
+                                        </button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -545,7 +555,7 @@
             
             <div class="pricing-note" style="max-width: 800px; margin: 2rem auto 0; text-align: center; padding: 1.5rem; justify-content: center;">
                 <i class="fas fa-info-circle"></i>
-                <span><strong data-key="pricing_note">Hinweis:</strong> <span data-key="non_member_fee">CHF 15 pro Lektion für Nicht‑Mitglieder (aufgeteilt auf alle Nicht‑Mitglieder) – nur bei Spielen im TC Basel West (Outdoor). Wichtig: Bei Indoor-Spielen kommt zusätzlich die Platzgebühr hinzu.</span></span>
+                <span><strong data-key="pricing_note">Hinweis:</strong> <span data-key="non_member_fee">CHF 10 pro Lektion für Nicht‑Mitglieder (aufgeteilt auf alle Nicht‑Mitglieder) – nur bei Spielen im TC Basel West (Outdoor). Wichtig: Bei Indoor-Spielen kommt zusätzlich die Platzgebühr hinzu.</span></span>
             </div>
         </div>
     </section>
@@ -835,13 +845,13 @@
 
                         <div class="contact-card">
                             <div class="contact-icon">
-                                <a href="https://www.instagram.com/eltigre_333/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <a href="https://www.instagram.com/tennisschule_batisteguerra/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </div>
                             <div class="contact-details">
                                 <h4>Instagram</h4>
-                                <p><a href="https://www.instagram.com/eltigre_333/" target="_blank" rel="noopener noreferrer">@eltigre_333</a></p>
+                                <p><a href="https://www.instagram.com/tennisschule_batisteguerra/" target="_blank" rel="noopener noreferrer">@tennisschule_<wbr>batisteguerra</a></p>
                             </div>
                         </div>
                         
@@ -890,7 +900,7 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/eltigre_333/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/tennisschule_batisteguerra/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                         <a href="https://wa.me/41762120297" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         <a href="mailto:batiste.guerra0@sunrise.ch" aria-label="Email" target="_blank"><i class="fas fa-envelope"></i></a>
                     </div>

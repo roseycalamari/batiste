@@ -233,13 +233,16 @@
                 four_persons: '4 Personen',
                 five_persons: '5 Personen',
                 pricing_note: 'Hinweis:',
-                non_member_fee: 'CHF 15 pro Lektion für Nicht‑Mitglieder (aufgeteilt auf alle Nicht‑Mitglieder) – nur bei Spielen im TC Basel West (Outdoor). Wichtig: Bei Indoor-Spielen kommt zusätzlich die Platzgebühr hinzu.',
+                non_member_fee: 'CHF 10 pro Lektion für Nicht‑Mitglieder (aufgeteilt auf alle Nicht‑Mitglieder) – nur bei Spielen im TC Basel West (Outdoor). Wichtig: Bei Indoor-Spielen kommt zusätzlich die Platzgebühr hinzu.',
                 view_more: 'Mehr erfahren',
                 view_flyer: 'Flyer ansehen',
                 contact_us_button: 'Kontaktieren Sie mich',
                 book_now: 'Jetzt buchen',
                 book_now_confirm: 'Bestätigen',
-                book_now_hint: 'Die Angaben gehen direkt als WhatsApp-Nachricht an Batiste.',
+                book_now_whatsapp: 'WhatsApp',
+                book_now_email: 'E-Mail',
+                book_now_hint: 'Die Angaben gehen direkt an Batiste, per WhatsApp oder E-Mail.',
+                book_mail_subject: 'Tennisstunde buchen',
                 book_now_name: 'Name',
                 book_now_lesson: 'Lektion',
                 book_now_lesson_ph: 'Lektion wählen',
@@ -560,13 +563,16 @@
                 four_persons: '4 People',
                 five_persons: '5 People',
                 pricing_note: 'Note:',
-                non_member_fee: 'Extra CHF 15 per lesson for non‑members (shared by all non‑members) — only when playing at TC Basel West (outdoor). Important: For indoor play, the additional court fee is charged on top of this.',
+                non_member_fee: 'Extra CHF 10 per lesson for non‑members (shared by all non‑members) — only when playing at TC Basel West (outdoor). Important: For indoor play, the additional court fee is charged on top of this.',
                 view_more: 'View more',
                 view_flyer: 'View flyer',
                 contact_us_button: 'Contact Me',
                 book_now: 'Book now',
                 book_now_confirm: 'Confirm',
-                book_now_hint: 'Your details go straight to Batiste on WhatsApp.',
+                book_now_whatsapp: 'WhatsApp',
+                book_now_email: 'Email',
+                book_now_hint: 'Your details go straight to Batiste, on WhatsApp or by email.',
+                book_mail_subject: 'Book a tennis lesson',
                 book_now_name: 'Name',
                 book_now_lesson: 'Lesson',
                 book_now_lesson_ph: 'Choose a lesson',
@@ -1996,7 +2002,15 @@
                     nameInput.setCustomValidity('');
                     if (!form.reportValidity()) return;
 
-                    window.open(this.buildBookingWhatsAppUrl(block, form), '_blank', 'noopener,noreferrer');
+                    const message = this.buildBookingMessage(block, form);
+                    const channel = event.submitter?.dataset.channel || 'whatsapp';
+
+                    if (channel === 'email') {
+                        window.location.href = this.buildBookingMailtoUrl(message, nameInput.value.trim());
+                        return;
+                    }
+
+                    window.open(`https://wa.me/41762120297?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
                 });
             });
 
@@ -2014,7 +2028,7 @@
             });
         }
 
-        buildBookingWhatsAppUrl(block, form) {
+        buildBookingMessage(block, form) {
             const t = (key) => this.getTranslation(key);
             const program = block.closest('.age-card')?.querySelector('.card-title')?.textContent.trim() || '';
             const name = form.querySelector('[name="name"]').value.trim();
@@ -2054,7 +2068,12 @@
 
             lines.push('', t('book_wa_outro'));
 
-            return `https://wa.me/41762120297?text=${encodeURIComponent(lines.join('\n'))}`;
+            return lines.join('\n');
+        }
+
+        buildBookingMailtoUrl(message, name) {
+            const subject = `${this.getTranslation('book_mail_subject')} — ${name}`;
+            return `mailto:batiste.guerra0@sunrise.ch?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
         }
 
         /**

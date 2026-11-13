@@ -252,7 +252,7 @@ When creating new content, ensure:
 
 **Website:** https://www.batisteguerra.ch
 
-**Instagram:** @eltigre_333
+**Instagram:** @tennisschule_batisteguerra
 
 **Use this EXACT format everywhere for local SEO!**
 

@@ -162,7 +162,7 @@
       - Tennis federation websites
 
 12. **Social Media Presence**
-    - Post regularly on Instagram (@eltigre_333)
+    - Post regularly on Instagram (@tennisschule_batisteguerra)
     - Share training videos
     - Post student success stories
     - Use hashtags: #TennisBasel #TennisschuleBasel #TennisSchweiz
